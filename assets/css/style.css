@@ -1,0 +1,639 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body {
+    font-family: "Oswald, san-serif";
+    font-size: 20px;
+}
+
+.body {
+    height: 100%;
+    text-align: center;
+}
+
+/* ----------------------------------- Nav Bar */
+
+.navbar {
+    background-color: #5D3587;
+}
+
+.page-nav {
+    font-size: 25px;
+    font-weight: 700;
+    background-color: #A367B1;
+    width: 100%;
+    line-height: 85px;
+}
+
+.navbar-nav {
+    margin: auto;
+    display: inline-block;
+}
+
+.nav-item {
+    display: inline-block;
+    text-align: center;
+}
+
+.page-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.page-nav ul li a:hover,
+.socials ul li a:hover,
+.question a:hover {
+    color: #392467;
+    text-decoration: underline;
+}
+
+.ui-home, 
+.ui-about-us {
+    text-align: right;
+}
+
+.ui-our-community,
+.ui-join-us {
+    text-align: left;
+}
+
+
+/* ----------------------------------- Header */
+
+.header-div {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------- Logo */
+
+.logo {
+    background-image: url(../images/Website\ Logo.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.header-div {
+    justify-content: center;
+    display: flex;
+}
+
+/* ----------------------------------- Hero Image */
+
+.hero-image {
+    background-image: url(../images/Hero\ Image.jpg);
+    background-size: 100% 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-element {
+    width: 50%;
+    text-align: center;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-element h1 {
+    font-size: 50px;
+    padding: 5px;
+}
+
+.hero-element h2 {
+    padding: 3px;
+}
+
+.hero-element .button,
+.join-button .button,
+.form-button,
+.thankyou .button {
+    width: 20%;
+    font-size: 20px;
+    background-color: #A367B1;
+    border-color: #A367B1;
+    color: #fff;
+    margin: 15px;
+}
+
+.hero-element .button:hover,
+.join-button .button:hover,
+.form-button:hover,
+.thankyou .button:hover {
+    color: #fff;
+    background-color: #392467;
+    border-color: #392467;
+}
+
+/* ----------------------------------- Features Section */
+
+.features,
+.about-us, 
+.events,
+.calendar,
+.community-talent,
+.events-list,
+.join-button,
+.reviews,
+.contact-form,
+.thankyou {
+    font-family: "Oswald, san-serif";
+    font-weight: 500;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.features p,
+.about-us p,
+.events p,
+.calendar p,
+.community-talent p,
+.events-list p,
+.join-button p,
+.reviews p,
+.contact-form p {
+    font-family: "Exo, san-serif";
+}
+
+.features h1,
+.features h3,
+.about-us h1,
+.about-us h3,
+.community-container h1,
+.admin-team h1,
+.events h1,
+.community-talent h1,
+.events-list h2,
+.join-button h1,
+.reviews h1,
+.contact-form h1 {
+    text-decoration: underline;
+}
+
+.features h1,
+.about-us h1,
+.community-container h1,
+.admin-team h1,
+.events h1,
+.community-talent h1,
+.join-button h1,
+.reviews h1,
+.thankyou h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 30px;
+}
+
+.contact-form h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+.features-element,
+.about-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.features-text,
+.about-text,
+.admin-intro,
+.events-body,
+.events-list,
+.join-button p,
+.reviews p,
+.rev,
+.contact-form,
+.thankyou {
+    background-color: #C9C9C9;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.events-img,
+.admins-img,
+.mature-img,
+.who-are-we-img,
+.our-goal-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    height: 300px;
+    margin: 40px;
+    padding: 10px;
+}
+
+.events-img {
+    background-image: url(../images/Event\ Image.jpg);
+}
+
+.admins-img {
+    background-image: url(../images/Admin\ Image.jpg);
+}
+
+.mature-img {
+    background-image: url(../images/Mature\ image.jpg);
+}
+
+/* ----------------------------------- About Us */
+
+.about-us {
+    margin-top: 60px;
+}
+
+.admin-intro {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 75%;
+    
+}
+
+.admin-info {
+    margin: auto;
+    width: 75%;
+}
+
+
+.admin1,
+.admin2,
+.admin3 {
+    height: 200px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    background-size: cover;
+    border-radius: 50%
+}
+
+.admin1 {
+    background-image: url(../images/Muppet.jpg);
+}
+
+.admin2 {
+    background-image: url(../images/Neko.jpg);
+}
+
+.admin3 {
+    background-image: url(../images/Allan.jpg);
+}
+
+.who-are-we-img {
+    background-image: url(../images/Who\ are\ we.jpg);
+}
+
+.our-goal-img {
+    background-image: url(../images/Our\ Goal.jpg);
+}
+
+
+/* ----------------------------------- Events */
+
+.calendar,
+.events {
+    text-align: center;
+}
+
+.events {
+    margin-top: 50px;
+}
+
+.events-body,
+.calendar,
+.events-list {
+    width: 75%;
+    margin: 25px auto;
+}
+
+.join-button,
+.reviews {
+    width: 75%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.table-cell {
+    width: 14.29%;
+}
+
+.booked {
+    background-color: rgba(0,0,0,0.2);
+    width: 75%;
+    border-radius: 5px;
+    margin: auto;
+    padding: 2px; 
+}
+
+
+/* ----------------------------------- Community Talent */
+
+.community-container,
+.admin-team {
+    text-align: center;
+    font-weight: 500;
+    margin: 50px 0;
+}
+
+.community-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talent {
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.talent-content {
+    background-color: rgba(0,0,0,0.3);
+    padding: 10px;
+    color: #fff;
+}
+
+.talent-content p,
+.talent-content a {
+    font-family: "Exo, sans-serif";
+}
+
+.talent a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.user1 {
+    background-image: url(../images/user1.jpg);
+}
+
+.user2 {
+    background-image: url(../images/user2.jpg);
+}
+
+.user3 {
+    background-image: url(../images/user3.jpg);
+}
+
+.user4 {
+    background-image: url(../images/user4.jpg);
+}
+
+.talent-showcase {
+    width: 75%;
+    margin: 50px auto;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 25px;
+}
+
+.community-talent {
+    text-align: center;
+}
+
+.carousel-inner {
+    border-radius: 25px;
+}
+
+/* ----------------------------------- Contact Submit */
+
+.thankyou {
+    margin-top: 15%;
+    margin-bottom: 15%; 
+    width: 80%;
+}
+
+.thankyou button {
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------- Footer */
+
+.footer {
+    background-color: #A367B1;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-weight: 500;
+    position: relative;
+    bottom: 0;   
+}
+
+.footer .row {
+    height: 100%;
+}
+
+.socials li {
+    display: inline;
+    margin: 0 25px;
+    font-size: 25px;
+    float: right;
+}
+
+.socials ul li a,
+.question a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.question {
+    text-align: left;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+/* ----------------------------------- Join Us */
+
+.rev {
+    margin: 10px;
+}
+
+/* ----------------------------------- Contact Us */
+
+.contact-form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 90%;
+    height: 50%;
+}
+
+textarea {
+    height: 200px;
+    width: 75%;
+}
+
+form input,
+form textarea {
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------- Media Queries*/
+
+@media only screen and (max-width: 1200px) {
+    .page-nav {
+        font-size: 20px;
+    }
+
+    .logo {
+        height:100px;
+        width:100px;
+    }
+
+    .header-div {
+        height: 70px;
+    }
+
+    .page-nav {
+        line-height: 55px;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    .collapse:not(.show) {
+        display: block;
+        visibility: visible;
+    }
+
+    .navbar,
+    .events-list {
+        display: none;
+    }
+
+
+
+}
+
+@media screen and (max-width: 1000px) {
+
+    .page-nav {
+        position: relative;
+    }
+
+    .navbar-nav {
+        width: 40%;
+        margin: 0;
+        padding:0;
+        position: absolute;
+        right: 0;
+        top: 70px;
+    }
+
+    .nav-item {
+        display: block;
+        text-align: center;
+        background-color: #A367B1;
+        border: 1px solid white;
+        line-height: 50%;
+        width:100%;
+    }
+
+    .ui-spare,
+    .admins-img,
+    .mature-img,
+    .events-img,
+    .user3,
+    .user4,
+    .who-are-we-img,
+    .our-goal-img {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        right: 0;
+        height: 70px;
+    }
+
+    .hero-element {
+        width: 80%;
+    }
+
+    .hero-element .button {
+        width: 30%;
+    }
+    
+    .join-button .button {
+        width: 50%;
+    }
+
+    .features-text,
+    .about-text,
+    .talent {
+        width: 75%;
+    }
+
+    .socials li,
+    .question {
+        font-size: 15px;
+    }
+
+    .question,
+    .socials {
+        padding: 0 0 0 10px;
+    }
+
+    .admin-info,
+    .rev-block {
+        display: block;
+    }
+    
+    .admin {
+        width: 90%;
+        margin: auto;
+    }
+
+    .admin1,
+    .admin2,
+    .admin3 {
+        margin-bottom: 30px;
+    }
+
+    .calendar {
+        display: none;
+    }
+
+    .reviews,
+    .join-button {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    .hero-element .button,
+    .form-button {
+        width: 50%;
+    }
+
+    .socials li {
+        padding: 0 5px;
+        margin: 0 5px;
+    }
+
+}
+
+
