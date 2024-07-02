@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
+    <title>PokeCollector</title>
+</head>
+<body>
+    <header>
+        <!-- top navbar -->
+        <nav class="blue-grey lighten-5">
+            <div class="nav-wrapper">
+              <a href="{{ url_for('home') }}" class="brand-logo"><img class="logo" src="{{ url_for('static', filename='img/logo.png') }}"></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="">Card Set</a></li>
+                <li><a href="">Card Search</a></li>
+                <li><a href="">Login/Signup</a></li>
+              </ul>
+            </div>
+          </nav>
+        
+          <!-- mobile sidenav -->
+          <ul class="sidenav" id="mobile-demo">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="">Card Set</a></li>
+                <li><a href="">Card Search</a></li>
+                <li><a href="">Login/Signup</a></li>
+          </ul>        
+    </header>
+    
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="page-footer blue-grey lighten-5 black-text">
+        <div class="container">
+            <div class="row center-align">
+                <div class="col s12">
+                    <ul class="socials">
+                        <li><a href=""><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-instagram"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-x-twitter"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-tiktok"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-square-reddit"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row center-align credits">
+                <div class="col s12">
+                    <p>Data made available using the <a href="">Pokemon TCG API</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/6414297e71.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
