@@ -4,11 +4,13 @@
     <div class="container hero-image valign-wrapper">
         <div class="row">
             <div class="col s12 marquee-container">
-                <marquee behavior="scroll" direction="left">
+                <ul class="marquee">
                 {% for card in cards %}
+                <li>
                     <img class="hero-card" src="{{ card.images.small }}">
+                </li>
                 {% endfor %}
-                </marquee>
+                </ul>
             </div>
         </div>
     </div>

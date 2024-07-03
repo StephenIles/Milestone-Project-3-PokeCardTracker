@@ -30,13 +30,23 @@ nav ul a {
 }
 
 .hero-card {
-    display: inline-block;
     margin: 10px 30px;
     height: 500px;
 }
 
 .marquee-container {
     padding: 0 !important;
+}
+
+.marquee {
+    animation: marquee 250s linear infinite;
+    overflow-x: hidden;
+    width: auto;
+    white-space: nowrap;
+}
+
+.marquee li {
+    display: inline-block;
 }
 
 /* Footer */
@@ -75,4 +85,11 @@ footer li a {
 
 .credits {
     margin: 0;
+}
+
+/* animations */
+
+@keyframes marquee {
+    from { transform: translateX(0%); }
+    to   { transform: translateX(-100%); }
 }
