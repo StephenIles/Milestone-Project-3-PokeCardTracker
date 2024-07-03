@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container hero-image valign-wrapper">
+        <div class="row">
+            <div class="col s12 marquee-container">
+                <marquee behavior="scroll" direction="left">
+                {% for card in cards %}
+                    <img class="hero-card" src="{{ card.images.small }}">
+                {% endfor %}
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

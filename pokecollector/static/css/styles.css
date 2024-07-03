@@ -4,6 +4,10 @@ nav {
     height: 100px;
 }
 
+.nav-warpper {
+    margin: 20px;
+}
+
 nav ul a {
     color: black;
     line-height: 100px;
@@ -12,6 +16,27 @@ nav ul a {
 
 .logo {
     height: 100px;
+}
+
+/* Hero Seciton */
+
+.hero-image {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 700px;;
+    background: url("../img/hero-background-img.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.hero-card {
+    display: inline-block;
+    margin: 10px 30px;
+    height: 500px;
+}
+
+.marquee-container {
+    padding: 0 !important;
 }
 
 /* Footer */
