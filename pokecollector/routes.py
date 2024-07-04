@@ -12,3 +12,11 @@ def home():
     cards = Card.where(page=1, pageSize=30)
     sets = Set.where(page=1, pageSize=6)
     return render_template("index.html", cards=cards, sets=sets)
+
+@app.route("/set_search")
+def set_search():
+    return render_template("set_search.html")
+
+@app.route("/card_search")
+def card_search():
+    return render_template("card_search.html")
