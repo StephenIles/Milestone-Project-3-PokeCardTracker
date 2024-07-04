@@ -15,4 +15,31 @@
         </div>
     </div>
 
+    <div class="featured-sets container center-align">
+        <div class="row">
+            <div class="col s12">
+                <h3>Featured Sets</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for set in sets %}
+            <div class="col s12 m6">
+                <a href="">
+                <div class="card feature-card z-depth-3">
+                    <div class="card-content">
+                      <div class="card-element valign-wrapper">
+                        <img class="feature-logo" src="{{ set.images.logo }}">
+                      </div>
+                      <div class="card-element">
+                        <h4>{{ set.name }}</h4>
+                        <h5>{{ set.releaseDate }}</h5>
+                      </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 {% endblock %}

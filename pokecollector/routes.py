@@ -9,5 +9,6 @@ from pokemontcgsdk import Rarity
 
 @app.route("/")
 def home():
-    cards = Card.where(q='name:charizard')
-    return render_template("index.html", cards=cards)
+    cards = Card.where(page=1, pageSize=30)
+    sets = Set.where(page=1, pageSize=6)
+    return render_template("index.html", cards=cards, sets=sets)
