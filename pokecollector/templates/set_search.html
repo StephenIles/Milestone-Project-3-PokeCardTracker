@@ -1,6 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <h1> Sets </h1>
+    <div class="container">
+        {% for name in series %}
+        <div class="row">
+            <div class="col s12">
+                <h3>{{ name }}</h3>
+            </div>
+        </div>
+            <div class="row center-align">
+                {% for set in sets %}
+                    {% if set.series == name %}
+                    <div class="col s12 m6 l4">
+                        <a href="">
+                            <div class="card feature-card z-depth-3">
+                                <div class="card-content">
+                                <div class="card-element valign-wrapper">
+                                    <img class="feature-logo" src="{{ set.images.logo }}">
+                                </div>
+                                <div class="card-element">
+                                    <h4>{{ set.name }}</h4>
+                                    <h5>{{ set.releaseDate }}</h5>
+                                </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
 
 {% endblock %}

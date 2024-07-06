@@ -15,7 +15,12 @@ def home():
 
 @app.route("/set_search")
 def set_search():
-    return render_template("set_search.html")
+    sets = Set.all()
+    series = []
+    for set in sets:
+        if set.series not in series:
+            series.append(set.series)
+    return render_template("set_search.html", sets=sets, series=series)
 
 @app.route("/card_search")
 def card_search():
