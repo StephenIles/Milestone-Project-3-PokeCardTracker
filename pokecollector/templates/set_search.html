@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
+    <div class="container search-box center-align">
+        <div class="row">
+            <p>Set Search</p>
+            <form id="set-search">
+                <input class="search-input" type="search" name="search" placeholder="eg: Sword & Shield">
+            </form>
+        </div>
+        <hr>
+    </div>
+
     <div class="container">
         {% for name in series %}
         <div class="row">
@@ -12,7 +22,7 @@
                 {% for set in sets %}
                     {% if set.series == name %}
                     <div class="col s12 m6 l4">
-                        <a href="">
+                        <a href="/sets/{{ set.name }}">
                             <div class="card feature-card z-depth-3">
                                 <div class="card-content">
                                 <div class="card-element valign-wrapper">

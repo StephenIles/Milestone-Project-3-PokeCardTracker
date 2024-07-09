@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 from pokecollector import app, db
 from pokemontcgsdk import Card
 from pokemontcgsdk import Set
@@ -6,6 +6,7 @@ from pokemontcgsdk import Type
 from pokemontcgsdk import Supertype
 from pokemontcgsdk import Subtype
 from pokemontcgsdk import Rarity
+
 
 @app.route("/")
 def home():
@@ -25,3 +26,12 @@ def set_search():
 @app.route("/card_search")
 def card_search():
     return render_template("card_search.html")
+
+@app.route("/sets/<sets_name>")
+def sets(sets_name):
+    sets = Set.all()
+    for set in sets:
+        if set.name == sets_name:
+            active_set = sets_name
+    cards = Card.where(q='set.name=<sets_name>')
+    return render_template("set_page.html", active_set=active_set, sets=sets, cards=cards)

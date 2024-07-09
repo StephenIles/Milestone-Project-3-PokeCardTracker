@@ -89,8 +89,13 @@ nav ul a {
 
 /* Set Search */
 
-.series-cards {
-    text-align: center;
+.search-box {
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.search-input {
+    width: 75%;
 }
 
 /* Footer */
