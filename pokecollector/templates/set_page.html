@@ -9,9 +9,11 @@
             </div>
             <div class="row">
                 {% for card in cards %}
-                <div class="col s12 m6 l4">
+                <a href="/card/{{ card.name }}">
+                <div class="col s12 m6 l3">
                     <img src="{{ card.images.small }}">
                 </div>
+                </a>
                 {% endfor %}
             </div>
         </div>

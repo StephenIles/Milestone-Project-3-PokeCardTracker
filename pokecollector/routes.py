@@ -30,8 +30,14 @@ def card_search():
 @app.route("/sets/<sets_name>")
 def sets(sets_name):
     sets = Set.all()
-    for set in sets:
-        if set.name == sets_name:
-            active_set = sets_name
-    cards = Card.where(q='set.name=<sets_name>')
+    active_set = None
+    for s in sets:
+        if s.name.lower() == sets_name.lower():
+            active_set = s
+            break
+        
+        if active_set is None:
+            return "Set not found", 404
+        
+    cards = Card.where(q=f'set.name:{sets_name}')
     return render_template("set_page.html", active_set=active_set, sets=sets, cards=cards)
