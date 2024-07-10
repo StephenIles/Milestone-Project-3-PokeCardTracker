@@ -35,7 +35,8 @@ def sets(sets_id):
 
 @app.route("/cards/<card_id>")
 def cards(card_id):
-    card = Card.where(q=f'card.id:"{card_id}"')
-    return render_template("card_page.html", card=card)
+    card = Card.where(q=f'id:"{card_id}"')
+    subtypes = Subtype.all()
+    return render_template("card_page.html", card=card, subtypes=subtypes)
     
     
