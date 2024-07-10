@@ -27,17 +27,18 @@ def set_search():
 def card_search():
     return render_template("card_search.html")
 
-@app.route("/sets/<sets_name>")
-def sets(sets_name):
+@app.route("/sets/<sets_id>")
+def sets(sets_id):
     sets = Set.all()
     active_set = None
+    normalized_set_id = sets_id.strip().lower()
     for s in sets:
-        if s.name.lower() == sets_name.lower():
+        if s.id.strip().lower() == normalized_set_id:
             active_set = s
             break
         
-        if active_set is None:
-            return "Set not found", 404
+    if active_set is None:
+        return "Set not found", 404
         
-    cards = Card.where(q=f'set.name:{sets_name}')
+    cards = Card.where(q=f'set.name:"{active_set.name}"')
     return render_template("set_page.html", active_set=active_set, sets=sets, cards=cards)
