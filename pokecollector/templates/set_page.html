@@ -4,12 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <h3>{{ active_set.name }}</h3>
+                    <h3>{{ sets[0].name }}</h3>
                 </div>
             </div>
             <div class="row">
                 {% for card in cards %}
-                <a href="/card/{{ card.name }}">
+                <a href="/cards/{{ card.name }}">
                 <div class="col s12 m6 l3">
                     <img src="{{ card.images.small }}">
                 </div>
