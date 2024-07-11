@@ -37,6 +37,65 @@ def sets(sets_id):
 def cards(card_id):
     card = Card.where(q=f'id:"{card_id}"')
     subtypes = Subtype.all()
-    return render_template("card_page.html", card=card, subtypes=subtypes)
+    type_url = None
+    attacks_urls = []
+    
+    # checks for pokemon types and assigns the correct image
+    match card[0].types:
+        case ['Water']:
+            type_url = 'img/water.png'
+        case ['Colorless']:
+            type_url = 'img/colorless.png'
+        case ['Darkness']:
+            type_url = 'img/darkness.png'
+        case ['Dragon']:
+            type_url = 'img/dragon.png'
+        case ['Fairy']:
+            type_url = 'img/fairy.png'
+        case ['Fighting']:
+            type_url = 'img/fighting.png'
+        case ['Fire']:
+            type_url = 'img/fire.png'
+        case ['Grass']:
+            type_url = 'img/grass.png'
+        case ['Lightning']:
+            type_url = 'img/lightning.png'
+        case ['Metal']:
+            type_url = 'img/metal.png'
+        case ['Psychic']:
+            type_url = 'img/psychic.png'
+            
+            
+    # checks for attack type, adding images for each attck cost.        
+    for attack in card[0].attacks:
+        for each in attack.cost:
+            attack_cost_urls = []
+            match each:
+                case 'Water':
+                    attack_cost_urls.append('img/water.png')
+                case ['Colorless']:
+                    attack_cost_urls.append('img/colorless.png')
+                case ['Darkness']:
+                    attack_cost_urls.append('img/darkness.png')
+                case ['Dragon']:
+                    attack_cost_urls.append('img/dragon.png')
+                case ['Fairy']:
+                    attack_cost_urls.append('img/fairy.png')
+                case ['Fighting']:
+                    attack_cost_urls.append('img/fighting.png')
+                case ['Fire']:
+                    attack_cost_urls.append('img/fire.png')
+                case ['Grass']:
+                    attack_cost_urls.append('img/grass.png')
+                case ['Lightning']:
+                    attack_cost_urls.append('img/lightning.png')
+                case ['Metal']:
+                    attack_cost_urls.append('img/metal.png')
+                case ['Psychic']:
+                    attack_cost_urls.append('img/psychic.png')
+            attacks_urls.append(', '.join(attack_cost_urls))  # converts list to string.      
+                
+            
+    return render_template("card_page.html", card=card, subtypes=subtypes, type_url=type_url, attacks_urls=attacks_urls)
     
     
