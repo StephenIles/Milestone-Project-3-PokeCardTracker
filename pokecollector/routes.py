@@ -73,25 +73,25 @@ def cards(card_id):
             match each:
                 case 'Water':
                     attack_cost_urls.append('img/water.png')
-                case ['Colorless']:
+                case 'Colorless':
                     attack_cost_urls.append('img/colorless.png')
-                case ['Darkness']:
+                case 'Darkness':
                     attack_cost_urls.append('img/darkness.png')
-                case ['Dragon']:
+                case 'Dragon':
                     attack_cost_urls.append('img/dragon.png')
-                case ['Fairy']:
+                case 'Fairy':
                     attack_cost_urls.append('img/fairy.png')
-                case ['Fighting']:
+                case 'Fighting':
                     attack_cost_urls.append('img/fighting.png')
-                case ['Fire']:
+                case 'Fire':
                     attack_cost_urls.append('img/fire.png')
-                case ['Grass']:
+                case 'Grass':
                     attack_cost_urls.append('img/grass.png')
-                case ['Lightning']:
+                case 'Lightning':
                     attack_cost_urls.append('img/lightning.png')
-                case ['Metal']:
+                case 'Metal':
                     attack_cost_urls.append('img/metal.png')
-                case ['Psychic']:
+                case 'Psychic':
                     attack_cost_urls.append('img/psychic.png')
             attacks_urls.append(', '.join(attack_cost_urls))  # converts list to string.      
                 
