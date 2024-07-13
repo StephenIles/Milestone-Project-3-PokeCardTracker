@@ -29,7 +29,7 @@
 
 *   ### Wireframes
 
-    -   Whole Website Wireframe - Wireframes for Mobile, Tablet and Web - 
+    -   Whole Website Wireframe - Wireframes for Mobile, Tablet and Web - [Wireframes](https://www.figma.com/design/f0PduV12NpOv423LKPF62q/Milestone-Project-3?node-id=44-912&t=5awXRw3JwP0VKP7n-1)
 
 ## Features
 
@@ -44,20 +44,19 @@
 
 ### Frameworks, Libraries & Programs Used
 
-1. [Bootstrap 5.0.2:](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-    - Bootstrap was used to assist with[text] the responsiveness and styling of the website.
+1. [Materialize CSS:](https://materializecss.com/getting-started.html)
+1. [Python](https://www.python.org)
+1. [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+1. [PostgreSQL](https://www.postgresql.org)
+1. [Heroku](https://id.heroku.com)
+1. [Tembo](https://cloud.tembo.io)
+1. [Postman](https://web.postman.co)
 1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.
 1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
 1. [jQuery:](https://jquery.com/)
-    - jQuery came with Bootstrap to make the navbar responsive but was also used for the smooth scroll function in JavaScript.
 1. [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
-    - GitHub is used to store the projects code after being pushed from Git.
-1. [InVision:](https://www.invisionapp.com)
-    - InVision was used to create the [wireframes](https://stephen822206.invisionapp.com/freehand/Milestone-Project-1-Adp7w26oL) during the design process.
+1. [Figma:](https://www.figma.com)
 
 ## Testing
 
@@ -154,8 +153,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ## Credits
 
 ### Code
-
--   [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
 
 
 ### Content

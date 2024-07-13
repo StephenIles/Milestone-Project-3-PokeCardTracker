@@ -66,8 +66,7 @@ def cards(card_id):
             type_url = 'img/metal.png'
         case ['Psychic']:
             type_url = 'img/psychic.png'
-            
-            
+                    
     # checks for attack type, adding images for each attck cost.        
     for attack in card[0].attacks:
         for each in attack.cost:
@@ -97,62 +96,62 @@ def cards(card_id):
                     attack_cost_urls.append('img/psychic.png')
             attacks_urls.append(', '.join(attack_cost_urls))  # converts list to string.  
         
-        # check the weakeness type and assigns the correct url
-        if card[0].weaknesses != None:   
-            for weakness in card[0].weaknesses:
-                each_weakness_urls = []
-                match weakness.type:
-                    case 'Water':
-                        each_weakness_urls.append('img/water.png')
-                    case 'Colorless':
-                        each_weakness_urls.append('img/colorless.png')
-                    case 'Darkness':
-                        each_weakness_urls.append('img/darkness.png')
-                    case 'Dragon':
-                        each_weakness_urls.append('img/dragon.png')
-                    case 'Fairy':
-                        each_weakness_urls.append('img/fairy.png')
-                    case 'Fighting':
-                        each_weakness_urls.append('img/fighting.png')
-                    case 'Fire':
-                        each_weakness_urls.append('img/fire.png')
-                    case 'Grass':
-                        each_weakness_urls.append('img/grass.png')
-                    case 'Lightning':
-                        each_weakness_urls.append('img/lightning.png')
-                    case 'Metal':
-                        each_weakness_urls.append('img/metal.png')
-                    case 'Psychic':
-                        each_weakness_urls.append('img/psychic.png')
-                weakness_urls.append(', '.join(each_weakness_urls))  # converts list to string.
+    # check the weakeness type and assigns the correct url
+    if card[0].weaknesses != None:   
+        for weakness in card[0].weaknesses:
+            each_weakness_urls = []
+            match weakness.type:
+                case 'Water':
+                    each_weakness_urls.append('img/water.png')
+                case 'Colorless':
+                    each_weakness_urls.append('img/colorless.png')
+                case 'Darkness':
+                    each_weakness_urls.append('img/darkness.png')
+                case 'Dragon':
+                    each_weakness_urls.append('img/dragon.png')
+                case 'Fairy':
+                    each_weakness_urls.append('img/fairy.png')
+                case 'Fighting':
+                    each_weakness_urls.append('img/fighting.png')
+                case 'Fire':
+                    each_weakness_urls.append('img/fire.png')
+                case 'Grass':
+                    each_weakness_urls.append('img/grass.png')
+                case 'Lightning':
+                    each_weakness_urls.append('img/lightning.png')
+                case 'Metal':
+                    each_weakness_urls.append('img/metal.png')
+                case 'Psychic':
+                    each_weakness_urls.append('img/psychic.png')
+            weakness_urls.append(', '.join(each_weakness_urls))  # converts list to string.
             
-            # checks the retreat cost and assigns the correct urls
-            for retreat in card[0].retreatCost:
-                each_retreat_urls = []
-                match retreat:
-                    case 'Water':
-                        each_retreat_urls.append('img/water.png')
-                    case 'Colorless':
-                        each_retreat_urls.append('img/colorless.png')
-                    case 'Darkness':
-                        each_retreat_urls.append('img/darkness.png')
-                    case 'Dragon':
-                        each_retreat_urls.append('img/dragon.png')
-                    case 'Fairy':
-                        each_retreat_urls.append('img/fairy.png')
-                    case 'Fighting':
-                        each_retreat_urls.append('img/fighting.png')
-                    case 'Fire':
-                        each_retreat_urls.append('img/fire.png')
-                    case 'Grass':
-                        each_retreat_urls.append('img/grass.png')
-                    case 'Lightning':
-                        each_retreat_urls.append('img/lightning.png')
-                    case 'Metal':
-                        each_retreat_urls.append('img/metal.png')
-                    case 'Psychic':
-                        each_retreat_urls.append('img/psychic.png')
-                retreat_urls.append(', '.join(each_retreat_urls))  # converts list to string.      
+    # checks the retreat cost and assigns the correct urls
+    for retreat in card[0].retreatCost:
+        each_retreat_urls = []
+        match retreat:
+            case 'Water':
+                each_retreat_urls.append('img/water.png')
+            case 'Colorless':
+                each_retreat_urls.append('img/colorless.png')
+            case 'Darkness':
+                each_retreat_urls.append('img/darkness.png')
+            case 'Dragon':
+                each_retreat_urls.append('img/dragon.png')
+            case 'Fairy':
+                each_retreat_urls.append('img/fairy.png')
+            case 'Fighting':
+                each_retreat_urls.append('img/fighting.png')
+            case 'Fire':
+                each_retreat_urls.append('img/fire.png')
+            case 'Grass':
+                each_retreat_urls.append('img/grass.png')
+            case 'Lightning':
+                each_retreat_urls.append('img/lightning.png')
+            case 'Metal':
+                each_retreat_urls.append('img/metal.png')
+            case 'Psychic':
+                each_retreat_urls.append('img/psychic.png')
+        retreat_urls.append(', '.join(each_retreat_urls))  # converts list to string.      
                 
             
     return render_template("card_page.html", card=card, subtypes=subtypes, type_url=type_url, attacks_urls=attacks_urls, weakness_urls=weakness_urls, retreat_urls=retreat_urls)
