@@ -20,8 +20,145 @@
             </div>
         </div>
         <div class="row">
-            <div class="col s12 m6 l6 center-align">
-                <img class="card-img" src="{{ card[0].images.large }}">
+            <div class="col s12 m6 l6">
+                <div class="row center-align">
+                    <img class="card-img" src="{{ card[0].images.large }}">
+                </div>
+                <div class="row bottom-border valign-wrapper">
+                    <div class="col s12">
+                        <h4 class="bold-text">Prices</h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="bold-text"><a href="{{ card[0].tcgplayer.url }}" target="_blank">Buy Now From TCGPlayer</a></h5>
+                    <p>Last Updated: {{ card[0].tcgplayer.updatedAt }}</p>
+                    <p>{{ card[0].tcgplayer.prices }}</p>
+                    {% if card[0].tcgplayer.prices.normal != None %}
+                        <div class="col s12">
+                            <h5>Normal</h5>
+                        </div>
+                        <div class="col s4">
+                            <h5>Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.normal.low }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Mid</h5>
+                            <h6>{{ card[0].tcgplayer.prices.normal.mid }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>High</h5>
+                            <h6>{{ card[0].tcgplayer.prices.normal.high }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Market</h5>
+                            <h6>{{ card[0].tcgplayer.prices.normal.market }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Direct Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.normal.directLow }}</h6>
+                        </div>
+                    {% endif %}
+                    {% if card[0].tcgplayer.prices.holofoil != None %}
+                        <div class="col s12">
+                            <h5>Holofoil</h5>
+                        </div>
+                        <div class="col s4">
+                            <h5>Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.holofoil.low }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Mid</h5>
+                            <h6>{{ card[0].tcgplayer.prices.holofoil.mid }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>High</h5>
+                            <h6>{{ card[0].tcgplayer.prices.holofoil.high }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Market</h5>
+                            <h6>{{ card[0].tcgplayer.prices.holofoil.market }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Direct Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.holofoil.directLow }}</h6>
+                        </div>
+                    {% endif %}
+                    {% if card[0].tcgplayer.prices.reverseHolofoil != None %}
+                        <div class="col s12">
+                            <h5>Reverse Holofoil</h5>
+                        </div>
+                        <div class="col s4">
+                            <h5>Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.reverseHolofoil.low }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Mid</h5>
+                            <h6>{{ card[0].tcgplayer.prices.reverseHolofoil.mid }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>High</h5>
+                            <h6>{{ card[0].tcgplayer.prices.reverseHolofoil.high }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Market</h5>
+                            <h6>{{ card[0].tcgplayer.prices.reverseHolofoil.market }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Direct Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.reverseHolofoil.directLow }}</h6>
+                        </div>
+                    {% endif %}
+                    {% if card[0].tcgplayer.prices.firstEditionHolofoil != None %}
+                        <div class="col s12">
+                            <h5>First Edition Holofoil</h5>
+                        </div>
+                        <div class="col s4">
+                            <h5>Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionHolofoil.low }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Mid</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionHolofoil.mid }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>High</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionHolofoil.high }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Market</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionHolofoil.market }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Direct Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionHolofoil.directLow }}</h6>
+                        </div>
+                    {% endif %}
+                    {% if card[0].tcgplayer.prices.firstEditionNormal != None %}
+                        <div class="col s12">
+                            <h5>First Edition Normal</h5>
+                        </div>
+                        <div class="col s4">
+                            <h5>Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.low }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Mid</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.mid }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>High</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.high }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Market</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.market }}</h6>
+                        </div>
+                        <div class="col s4">
+                            <h5>Direct Low</h5>
+                            <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.directLow }}</h6>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
             <div class="col s12 m6 l6">
                 <div class="row bottom-border valign-wrapper">
@@ -39,11 +176,61 @@
                         <div class="col s12">
                             <h5 class="bold-text attack">{{ attack.name }}<span class="right">{{ attack.damage }}</span></h5>
                             {% for each in attacks_urls %}
-                                <img class="attack-energy-img" src="{{ url_for('static', filename=each) }}">
+                                <img class="energy-img" src="{{ url_for('static', filename=each) }}">
                             {% endfor %}
                             <p>{{ attack.text }}</p>
                         </div>
                     {% endfor %}
+                </div>
+                {% if card[0].rules != None %}
+                    <div class="row">
+                        <h5 class="section-title bold-text">Rules</h5>
+                        <div class="col s12">
+
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="row">
+                    <h5 class="section-title bold-text">Weakness</h5>
+                    <div class="col s12">
+                        {% for each in weakness_urls %}
+                            <img class="energy-img inline" src="{{ url_for('static', filename=each) }}">
+                        {% endfor %}
+                    </div>
+                </div>
+                {% if card[0].resistance %}
+                    <div class="row">
+                        <h5 class="section-title bold-text">Resistance</h5>
+                        <div class="col s12">
+
+                        </div>
+                    </div>
+                {% endif %}
+                <div class="row">
+                    <h5 class="section-title bold-text">Retreat Cost</h5>
+                    <div class="col s12">
+                        {% for each in retreat_urls %}
+                            <img class="energy-img inline" src="{{ url_for('static', filename=each) }}">
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="section-title bold-text">Artist</h5>
+                    <div class="col s12">
+                        <p>{{ card[0].artist }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="section-title bold-text">Rarity</h5>
+                    <div class="col s12">
+                        <p>{{ card[0].rarity }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h5 class="section-title bold-text">Set</h5>
+                    <div class="col s12">
+                        <p>{{ card[0].set.name }}</p>
+                    </div>
                 </div>
             </div>
         </div>
