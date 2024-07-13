@@ -29,10 +29,9 @@
                         <h4 class="bold-text">Prices</h4>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row bottom-border">
                     <h5 class="bold-text"><a href="{{ card[0].tcgplayer.url }}" target="_blank">Buy Now From TCGPlayer</a></h5>
                     <p>Last Updated: {{ card[0].tcgplayer.updatedAt }}</p>
-                    <p>{{ card[0].tcgplayer.prices }}</p>
                     {% if card[0].tcgplayer.prices.normal != None %}
                         <div class="col s12">
                             <h5>Normal</h5>
@@ -158,6 +157,34 @@
                             <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.directLow }}</h6>
                         </div>
                     {% endif %}
+                </div>
+                <div class="row bottom-border">
+                    <h5 class="bold-text"><a href="{{ card[0].cardmarket.url }}" target="_blank">Buy Now From Card Market</a></h5>
+                    <p>Last Updated: {{ card[0].cardmarket.updatedAt }}</p>
+                    <div class="col s4">
+                        <h5>Average Sale Price</h5>
+                        <h6>{{ card[0].cardmarket.prices.averageSellPrice }}</h6>
+                    </div>
+                    <div class="col s4">
+                        <h5>Low Price</h5>
+                        <h6>{{ card[0].cardmarket.prices.lowPrice }}</h6>
+                    </div>
+                    <div class="col s4">
+                        <h5>Trend Price</h5>
+                        <h6>{{ card[0].cardmarket.prices.trendPrice }}</h6>
+                    </div>
+                    <div class="col s4">
+                        <h5>1 Day Average</h5>
+                        <h6>{{ card[0].cardmarket.prices.avg1 }}</h6>
+                    </div>
+                    <div class="col s4">
+                        <h5>7 Day Average</h5>
+                        <h6>{{ card[0].cardmarket.prices.avg7 }}</h6>
+                    </div>
+                    <div class="col s4">
+                        <h5>30 Day Average</h5>
+                        <h6>{{ card[0].cardmarket.prices.avg30 }}</h6>
+                    </div>
                 </div>
             </div>
             <div class="col s12 m6 l6">

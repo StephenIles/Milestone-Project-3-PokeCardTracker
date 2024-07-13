@@ -97,6 +97,7 @@ def cards(card_id):
                     attack_cost_urls.append('img/psychic.png')
             attacks_urls.append(', '.join(attack_cost_urls))  # converts list to string.  
         
+        # check the weakeness type and assigns the correct url
         if card[0].weaknesses != None:   
             for weakness in card[0].weaknesses:
                 each_weakness_urls = []
@@ -125,6 +126,7 @@ def cards(card_id):
                         each_weakness_urls.append('img/psychic.png')
                 weakness_urls.append(', '.join(each_weakness_urls))  # converts list to string.
             
+            # checks the retreat cost and assigns the correct urls
             for retreat in card[0].retreatCost:
                 each_retreat_urls = []
                 match retreat:
