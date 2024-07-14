@@ -1,4 +1,4 @@
-<h1 align="center">First Milestone Project 3 - Pokemon Vault</h1>
+<h1 align="center">Milestone Project 3 - Pokemon Vault</h1>
 
 ## Live Website Link
 
@@ -10,13 +10,30 @@
 
     -   #### First Time Visitor Goals
 
-        
+        1. Crating an Account
+            - Sign up: Click on the "Sign Up" button at the top right corner of the page.
+            - Fill in Details: Provide your username, email and password.
+            - Verify Email: Check your inbox for a verification email and follow the instructions.
 
-    -   #### Returning Visitor Goals
+        1. Explore the Card Database
+            - Search for Cards: Use the serach bar to find specific cards by name.
+            - View Card Details: Click on any card to see detailed information, including stats, rarity and pricing.
 
-        
+        1. Build Your Collection
+            - Add Cards: Find the cards you own and add them to your personal collection. 
+            - Organize: Use filters and tags to organsize your collection by type, set or any other criteria.
+            - Collection Goals: Add cards to your "To Get List" so you can easily find the inforamtion about these and keep up to date on the prices. 
 
     -   #### Frequent User Goals
+
+        1. Expand and Update Your Collection
+            - New Additions: Regulary add new cards to your collection as you aquire them. 
+            - Organize: Keep your collection organized using filters, tags, and catergories. 
+            - Showcase: Share and showcase your collection with friends and family. 
+
+        2. Set Long Term Goals
+            - Complete Sets: Aim to complete entrie sets or special collections.
+            - Collection Milestones: Set and achieve milestones for the number of cards, values, or specific themes. 
         
 
 -   ### Design
@@ -45,18 +62,31 @@
 ### Frameworks, Libraries & Programs Used
 
 1. [Materialize CSS:](https://materializecss.com/getting-started.html)
-1. [Python](https://www.python.org)
+    - Used for website layout and to help with the responsive deisgn of the website.
+1. [Python](https://www.python.org) 
+    - Used to assist with API intergration
 1. [Flask](https://flask.palletsprojects.com/en/3.0.x/)
+    - Used to make the card and set pages from the database
 1. [PostgreSQL](https://www.postgresql.org)
+    - Used to store user collection information
 1. [Heroku](https://id.heroku.com)
+    - Used to host the website online
 1. [Tembo](https://cloud.tembo.io)
+    - Used to host the PostgerSQL Database
 1. [Postman](https://web.postman.co)
+    - Used to configure the API interaction.
 1. [Google Fonts:](https://fonts.google.com/)
+    - Used to import the fonts that were used
 1. [Font Awesome:](https://fontawesome.com/)
-1. [jQuery:](https://jquery.com/)
+    - Used for icons throughout the website.
+1. [Javascript:](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+    - Used for some of the Materialize functionallity and thorughout the website
 1. [Git](https://git-scm.com/)
+    - Used for version control
 1. [GitHub:](https://github.com/)
+    - Used to host the repository
 1. [Figma:](https://www.figma.com)
+    - Used for wireframe and designing
 
 ## Testing
 
@@ -72,12 +102,6 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 -   #### First Time Visitor Goals
 
       
-
-
--   #### Returning Visitor Goals
-
-      
-
       
 -   #### Frequent User Goals
 
