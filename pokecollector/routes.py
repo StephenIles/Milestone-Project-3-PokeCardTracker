@@ -200,6 +200,12 @@ def login_post():
     user = User.query.filter_by(email=email).first()
     
     # check if the user actually exisits
+    # takes the user supplied password, hash it and compares it to the stored password for this email.
+    if not user or not check_password_hash(user.password, password):
+        flash('Please check your user login details and try again.')
+        return redirect(url_for('login')) # if the user doesn't ewxists or the password in incorrect will take them back to the login page.
+    
+    # if they pass all checks and login in take them to their user page.
     return redirect(url_for("account"))
     
     
