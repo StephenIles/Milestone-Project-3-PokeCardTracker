@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
+from flask_login import login_user
 from pokecollector import app, db
 from pokemontcgsdk import Card
 from pokemontcgsdk import Set
@@ -166,6 +167,10 @@ def signup():
 def login():
     return render_template("login.html")
 
+@app.route("/profile")
+def profile():
+    return render_template("account.html")
+
 @app.route("/signup", methods=['POST'])
 def signup_post():
     #code to validate and add user to database
@@ -206,6 +211,7 @@ def login_post():
         return redirect(url_for('login')) # if the user doesn't ewxists or the password in incorrect will take them back to the login page.
     
     # if they pass all checks and login in take them to their user page.
-    return redirect(url_for("account"))
+    login_user(user, remember=remember)
+    return redirect(url_for("profile"))
     
     
