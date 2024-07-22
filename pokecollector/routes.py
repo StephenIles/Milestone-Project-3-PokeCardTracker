@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
-from flask_login import login_user
+from flask_login import login_user, current_user, login_required, logout_user
 from pokecollector import app, db
 from pokemontcgsdk import Card
 from pokemontcgsdk import Set
@@ -168,8 +168,15 @@ def login():
     return render_template("login.html")
 
 @app.route("/profile")
+@login_required
 def profile():
-    return render_template("account.html")
+    return render_template("account.html", name=current_user.name)
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 @app.route("/signup", methods=['POST'])
 def signup_post():

@@ -19,7 +19,14 @@
                 <li><a href="{{ url_for('home') }}">Home</a></li>
                 <li><a href="{{ url_for('set_search') }}">Card Set</a></li>
                 <li><a href="{{ url_for('card_search') }}">Card Search</a></li>
-                <li><a href="">Login/Signup</a></li>
+                {% if not current_user.is_authenticated %}
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('signup') }}">Signup</a></li>
+                {% endif %}
+                {% if current_user.is_authenticated %}
+                <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                {% endif %}
               </ul>
             </div>
           </nav>
