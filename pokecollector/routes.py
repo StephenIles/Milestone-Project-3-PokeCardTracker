@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
+from werkzeug.security import generate_password_hash, check_password_hash
+from .models import User
 from pokecollector import app, db
 from pokemontcgsdk import Card
 from pokemontcgsdk import Set
@@ -155,5 +157,49 @@ def cards(card_id):
                 
             
     return render_template("card_page.html", card=card, subtypes=subtypes, type_url=type_url, attacks_urls=attacks_urls, weakness_urls=weakness_urls, retreat_urls=retreat_urls)
+
+@app.route("/signup")
+def signup():
+    return render_template("signup.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/signup", methods=['POST'])
+def signup_post():
+    #code to validate and add user to database
+    email = request.form.get('email')
+    name = request.form.get('name')
+    password = request.form.get('password')
+    
+    # check to see if email is already in the database
+    user = User.query.filter_by(email=email).first()
+    
+    # if the user is found will redirect to user signup page
+    if user:
+        flash('Email address already exists')
+        return redirect(url_for("signup"))
+    
+    # create a new user with the form data. Hash the password so the plaintext version isn't saved
+    new_user = User(email=email, name=name, password=generate_password_hash(password, method='pbkdf2:sha256'))
+    
+    # add the new user to the datadase
+    db.session.add(new_user)
+    db.session.commit()
+    
+    return redirect(url_for("login"))
+
+@app.route("/login", methods=['POST'])
+def login_post():
+    # login code
+    email = request.form.get("email")
+    password = request.form.get("password")
+    remember = True if request.form.get("remember") else False
+    
+    user = User.query.filter_by(email=email).first()
+    
+    # check if the user actually exisits
+    return redirect(url_for("account"))
     
     
