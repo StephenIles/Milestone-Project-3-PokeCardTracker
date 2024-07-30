@@ -6,13 +6,15 @@
             <div class="col s12 m6 l6">
                 <h3 class="bold-text">{{ card[0].name }}</h3>
                 <h4>{{ card[0].supertype }} - 
-                    {% for sub in subtypes %}
-                        {% for each in card[0].subtypes %}
-                            {% if sub == each %}
-                                {{ sub }}
-                            {% endif %}
+                    {% if card[0].subtypes != None %}
+                        {% for sub in subtypes %}
+                            {% for each in card[0].subtypes %}
+                                {% if sub == each %}
+                                    {{ sub }}
+                                {% endif %}
+                            {% endfor %}
                         {% endfor %}
-                    {% endfor %}
+                    {% endif %}
                 </h4>
             </div>
             <div class="col s6 card-number">
@@ -194,12 +196,15 @@
                     </div>
                     <div class="col s6 card-hp right-align">
                         <h5>HP {{ card[0].hp }}</h5>
-                        <img class="type-img" src="{{ url_for('static', filename=type_url) }}">
+                        {% if type_url != None %}
+                            <img class="type-img" src="{{ url_for('static', filename=type_url) }}">
+                        {% endif %}
                     </div>
                 </div>
+                {% if card[0].attacks != None %}
                 <div class="row">
                     <h5 class="section-title bold-text">Attacks</h5>
-                    {% for attack in card[0].attacks%}
+                    {% for attack in card[0].attacks %}
                         <div class="col s12">
                             <h5 class="bold-text attack">{{ attack.name }}<span class="right">{{ attack.damage }}</span></h5>
                             {% for each in attacks_urls %}
@@ -209,6 +214,7 @@
                         </div>
                     {% endfor %}
                 </div>
+                {% endif %}
                 {% if card[0].rules != None %}
                     <div class="row">
                         <h5 class="section-title bold-text">Rules</h5>
@@ -220,9 +226,11 @@
                 <div class="row">
                     <h5 class="section-title bold-text">Weakness</h5>
                     <div class="col s12">
+                        {% if weakness_urls != None %}
                         {% for each in weakness_urls %}
                             <img class="energy-img inline" src="{{ url_for('static', filename=each) }}">
                         {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
                 {% if card[0].resistance %}
@@ -236,9 +244,11 @@
                 <div class="row">
                     <h5 class="section-title bold-text">Retreat Cost</h5>
                     <div class="col s12">
+                        {% if retreat_urls != None %}
                         {% for each in retreat_urls %}
                             <img class="energy-img inline" src="{{ url_for('static', filename=each) }}">
                         {% endfor %}
+                        {% endif %}
                     </div>
                 </div>
                 <div class="row">
