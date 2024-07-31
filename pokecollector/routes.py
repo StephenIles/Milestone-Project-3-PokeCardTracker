@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
 from flask_login import login_user, current_user, login_required, logout_user
@@ -26,9 +26,19 @@ def set_search():
             series.append(set.series)
     return render_template("set_search.html", sets=sets, series=series)
 
-@app.route("/card_search")
+@app.route('/card_search_post', methods=['POST'])
+def card_search_post():
+    search_query = request.form.get("search")
+    # Redirect to the GET route with the search query in the URL
+    return redirect(url_for('card_search', search=search_query))
+
+@app.route('/card_search', methods=['GET'])
 def card_search():
-    return render_template("card_search.html")
+    # Get the search query from the URL parameters
+    search_query = request.args.get('search', '')
+    cards = Card.where(q=f'name:"{search_query}"') if search_query else []
+    return render_template('card_search.html', cards=cards)
+    
 
 @app.route("/sets/<sets_id>")
 def sets(sets_id):
