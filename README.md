@@ -127,18 +127,18 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Deployment
 
-### GitHub Pages
+### Heroku
 
-The project was deployed to GitHub Pages using the following steps...
+This Project was deployed with Heroku
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/StephenIles/OneLife-Milestone-Project-1-)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-3. In the menu on the left click on "Pages".
-4. Under "Source", click the dropdown called "None" and select "main".
-5. The page will automatically refresh.
-6. Change the folder from "/root" to "/docs"
-7. The page will automatically refresh
-8. At the top of the page there will be a link to Visit the website.
+1. Create an account with Heroku
+2. Link your Github and your Heroku accounts
+3. In Heroku create a new app from Github selection the porjext repository
+
+
+### Database Hosting
+
+1. Tembo
 
 ### Forking the GitHub Repository
 
@@ -228,3 +228,14 @@ This is where I dug deeper to learn more about the marquee tag and this is then 
   }
 
 ```
+
+### Second Problem - User Login
+
+My second problem that I came across was creating the functionality for a user to be able to register, login and logout. 
+This was something new that I had never tried before but I knew it was going to be a important part of my project. 
+
+I did a lot of research online for this trying to figure out the best solution for a user system that would work well with the current tech stack. I did start by looking at [OAuth](https://auth0.com/) as this was a resource that I knew about and thought that it might work. While I was looking into how to intergrate OAuth into my current project I came across a Flask addon called [Flask Login](https://pypi.org/project/Flask-Login/) which gave me the functionallity that I was looking for without trying to learn a whole new system.
+
+I figured this would be the best option for me to intergrate into the project as I am already using Flask.
+
+I spent some time going through the Flask Login documentation and some online tutorials on youtube, to try and understand how Flask Login works. 
