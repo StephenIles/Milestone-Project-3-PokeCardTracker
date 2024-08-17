@@ -2,6 +2,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
+
 if os.path.exists("env.py"):
     import env 
   
@@ -27,6 +28,10 @@ from .models import User
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
+
+def drop_tables():
+    with app.app_context():
+        db.drop_all()
 
 def create_tables():
     with app.app_context():

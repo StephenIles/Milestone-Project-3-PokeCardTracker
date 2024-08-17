@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
 from werkzeug.security import generate_password_hash, check_password_hash
-from .models import User
+from .models import User, UserCards
 from flask_login import login_user, current_user, login_required, logout_user
 from pokecollector import app, db
 from pokemontcgsdk import Card
@@ -183,7 +183,13 @@ def login():
 @app.route("/profile")
 @login_required
 def profile():
-    return render_template("account.html", name=current_user.name)
+    sets = Set.all()
+    series = []
+    for set in sets:
+        if set.series not in series:
+            series.append(set.series)
+    user_cards = UserCards.query.filter_by(user_id=current_user.id).all()
+    return render_template("account.html", name=current_user.name, user_cards=user_cards, sets=sets, series=series)
 
 @app.route('/logout')
 @login_required

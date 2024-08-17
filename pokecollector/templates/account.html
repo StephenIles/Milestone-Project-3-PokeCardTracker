@@ -1,6 +1,31 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
-    <h1>Welcome {{ name }}</h1>
+<div class="row">
+  <div class="col s12">
+    <h2>{{ name }}</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <ul class="collapsible">
+      {% for setName in series %}
+      <li>
+        <div class="collapsible-header">{{ setName }}</div>
+        <div class="collapsible-body">
+          <ul class="collapsible">
+            {% for set in sets %} {% if set.series == setName %}
+            <li>
+              <div class="collapsible-header">{{ set.name }}</div>
+              <div class="collapsible-body"></div>
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
