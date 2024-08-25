@@ -81,8 +81,8 @@ def cards(card_id):
             case ['Psychic']:
                 type_url = 'img/psychic.png'
                     
-    # checks for attack type, adding images for each attck cost.       
-    if card[0].attacks != None: 
+    # checks for attack type, adding images for each attck cost.
+    if card[0].attacks != None:
         for attack in card[0].attacks:
             for each in attack.cost:
                 attack_cost_urls = []
@@ -189,7 +189,8 @@ def profile():
         if set.series not in series:
             series.append(set.series)
     user_cards = UserCards.query.filter_by(user_id=current_user.id).all()
-    return render_template("account.html", name=current_user.name, user_cards=user_cards, sets=sets, series=series)
+    user_cards_dict = {uc.card_id for uc in user_cards}
+    return render_template("account.html", name=current_user.name, user_cards=user_cards, sets=sets, series=series, user_cards_dict=user_cards_dict)
 
 @app.route('/logout')
 @login_required
@@ -234,10 +235,53 @@ def login_post():
     # takes the user supplied password, hash it and compares it to the stored password for this email.
     if not user or not check_password_hash(user.password, password):
         flash('Please check your user login details and try again.')
-        return redirect(url_for('login')) # if the user doesn't ewxists or the password in incorrect will take them back to the login page.
+        return redirect(url_for('login')) # if the user doesn't exists or the password in incorrect will take them back to the login page.
     
     # if they pass all checks and login in take them to their user page.
     login_user(user, remember=remember)
     return redirect(url_for("profile"))
     
+@app.route("/add_collection/<card_id>", methods=['POST'])
+@login_required
+def add_collection(card_id):
+    # Pull the corresponding card information
+    card = Card.where(q=f'id:"{card_id}"')
     
+    if not card:
+        flash('Card not found')
+        return redirect(url_for('home'))  # Redirect to home or another route if card is not found
+
+    card = card[0]  # Assuming `where` returns a list, get the first item
+
+    # Pull user's cards
+    user_cards = UserCards.query.filter_by(user_id=current_user.id).all()
+    user_cards_dict = {uc.card_id for uc in user_cards}
+
+    # Check if the user already has the card in the collection
+    if card_id in user_cards_dict:
+        flash('Card already in your collection')
+    else:
+        # Build new card entry
+        user_card_image = card.images.small  # Corrected image field access
+        user_card_set = card.set.id  # Storing set ID instead of name (more precise)
+
+        new_card = UserCards(
+            user_id=current_user.id,
+            card_id=card_id,
+            card_image=user_card_image,
+            set_id=user_card_set
+        )
+
+        # Commit new card to the database
+        db.session.add(new_card)
+        db.session.commit()
+
+        # Let the user know the card has been added to their collection
+        flash('Card added to your collection')
+
+    # Redirect back to the card's detail page
+    return redirect(url_for('cards', card_id=card_id))  # Ensure this is always executed
+
+
+       
+

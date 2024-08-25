@@ -2,126 +2,117 @@
 
 ## Live Website Link
 
-  [Pokemon Vault]()
+[Pokemon Vault]()
 
 ## User Experience (UX)
 
--   ### User stories
+- ### User stories
 
-    -   #### First Time Visitor Goals
+  - #### First Time Visitor Goals
 
-        1. Crating an Account
-            - Sign up: Click on the "Sign Up" button at the top right corner of the page.
-            - Fill in Details: Provide your username, email and password.
-            - Verify Email: Check your inbox for a verification email and follow the instructions.
+    1. Crating an Account
 
-        1. Explore the Card Database
-            - Search for Cards: Use the serach bar to find specific cards by name.
-            - View Card Details: Click on any card to see detailed information, including stats, rarity and pricing.
+       - Sign up: Click on the "Sign Up" button at the top right corner of the page.
+       - Fill in Details: Provide your username, email and password.
+       - Verify Email: Check your inbox for a verification email and follow the instructions.
 
-        1. Build Your Collection
-            - Add Cards: Find the cards you own and add them to your personal collection. 
-            - Organize: Use filters and tags to organsize your collection by type, set or any other criteria.
-            - Collection Goals: Add cards to your "To Get List" so you can easily find the inforamtion about these and keep up to date on the prices. 
+    1. Explore the Card Database
 
-    -   #### Frequent User Goals
+       - Search for Cards: Use the serach bar to find specific cards by name.
+       - View Card Details: Click on any card to see detailed information, including stats, rarity and pricing.
 
-        1. Expand and Update Your Collection
-            - New Additions: Regulary add new cards to your collection as you aquire them. 
-            - Organize: Keep your collection organized using filters, tags, and catergories. 
-            - Showcase: Share and showcase your collection with friends and family. 
+    1. Build Your Collection
+       - Add Cards: Find the cards you own and add them to your personal collection.
+       - Organize: Use filters and tags to organsize your collection by type, set or any other criteria.
+       - Collection Goals: Add cards to your "To Get List" so you can easily find the inforamtion about these and keep up to date on the prices.
 
-        2. Set Long Term Goals
-            - Complete Sets: Aim to complete entrie sets or special collections.
-            - Collection Milestones: Set and achieve milestones for the number of cards, values, or specific themes. 
-        
+  - #### Frequent User Goals
 
--   ### Design
-    -   #### Colour Scheme
-        -   
-    -   #### Typography
-        -   
-    -   #### Imagery
-        -   
+    1. Expand and Update Your Collection
 
-*   ### Wireframes
+       - New Additions: Regulary add new cards to your collection as you aquire them.
+       - Organize: Keep your collection organized using filters, tags, and catergories.
+       - Showcase: Share and showcase your collection with friends and family.
 
-    -   Whole Website Wireframe - Wireframes for Mobile, Tablet and Web - [Wireframes](https://www.figma.com/design/f0PduV12NpOv423LKPF62q/Milestone-Project-3?node-id=44-912&t=5awXRw3JwP0VKP7n-1)
+    2. Set Long Term Goals
+       - Complete Sets: Aim to complete entrie sets or special collections.
+       - Collection Milestones: Set and achieve milestones for the number of cards, values, or specific themes.
+
+- ### Design
+  - #### Colour Scheme
+    -
+  - #### Typography
+    -
+  - #### Imagery
+    -
+
+* ### Wireframes
+
+  - Whole Website Wireframe - Wireframes for Mobile, Tablet and Web - [Wireframes](https://www.figma.com/design/f0PduV12NpOv423LKPF62q/Milestone-Project-3?node-id=44-912&t=5awXRw3JwP0VKP7n-1)
 
 ## Features
 
--   Responsive on all device sizes
+- Responsive on all device sizes
 
 ## Technologies Used
 
 ### Languages Used
 
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
 ### Frameworks, Libraries & Programs Used
 
 1. [Materialize CSS:](https://materializecss.com/getting-started.html)
-    - Used for website layout and to help with the responsive deisgn of the website.
-1. [Python](https://www.python.org) 
-    - Used to assist with API intergration
+   - Used for website layout and to help with the responsive deisgn of the website.
+1. [Python](https://www.python.org)
+   - Used to assist with API intergration
 1. [Flask](https://flask.palletsprojects.com/en/3.0.x/)
-    - Used to make the card and set pages from the database
+   - Used to make the card and set pages from the database
 1. [PostgreSQL](https://www.postgresql.org)
-    - Used to store user collection information
+   - Used to store user collection information
 1. [Heroku](https://id.heroku.com)
-    - Used to host the website online
+   - Used to host the website online
 1. [Tembo](https://cloud.tembo.io)
-    - Used to host the PostgerSQL Database
+   - Used to host the PostgerSQL Database
 1. [Postman](https://web.postman.co)
-    - Used to configure the API interaction.
+   - Used to configure the API interaction.
 1. [Google Fonts:](https://fonts.google.com/)
-    - Used to import the fonts that were used
+   - Used to import the fonts that were used
 1. [Font Awesome:](https://fontawesome.com/)
-    - Used for icons throughout the website.
+   - Used for icons throughout the website.
 1. [Javascript:](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-    - Used for some of the Materialize functionallity and thorughout the website
+   - Used for some of the Materialize functionallity and thorughout the website
 1. [Git](https://git-scm.com/)
-    - Used for version control
+   - Used for version control
 1. [GitHub:](https://github.com/)
-    - Used to host the repository
+   - Used to host the repository
 1. [Figma:](https://www.figma.com)
-    - Used for wireframe and designing
+   - Used for wireframe and designing
 
 ## Testing
 
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
--   [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
+- [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
 
 ### Results
 
-
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
-
-      
-      
--   #### Frequent User Goals
-
-      
+- #### First Time Visitor Goals
+- #### Frequent User Goals
 
 ### Further Testing
 
--   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
--   The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
--   A large amount of testing was done to ensure that all pages were linking correctly.
--   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+- The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+- The website was viewed on a variety of devices such as Desktop, Laptop, iPhone7, iPhone 8 & iPhoneX.
+- A large amount of testing was done to ensure that all pages were linking correctly.
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
 ## Testing Table
 
-
-
-
 ## Lighthouse Scores
-
-
 
 ### Known Bugs
 
@@ -134,7 +125,6 @@ This Project was deployed with Heroku
 1. Create an account with Heroku
 2. Link your Github and your Heroku accounts
 3. In Heroku create a new app from Github selection the porjext repository
-
 
 ### Database Hosting
 
@@ -178,18 +168,17 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
-
 ### Content
 
--   All content was written by the developer.
+- All content was written by the developer.
 
 ### Media
 
--   All Images were created by the developer using [Dream Studio](https://beta.dreamstudio.ai/generate)
+- All images where pulled throught the Pokemon
 
 ### Acknowledgements
 
--   My Mentor for continuous helpful feedback.
+- My Mentor for continuous helpful feedback.
 
 ## Problems and Soultions
 
@@ -213,9 +202,9 @@ My first problem I came across was how to make the Pokemon cards scroll across t
 
 ```
 
-This is where I dug deeper to learn more about the marquee tag and this is then where I found that the tag had been depreicated and was no longer supported by more modern browsers. So finding this out I looked more into CSS animations and found I could replicate the effect I wanted. The following in the code I implemented and you will see in the project code. 
+This is where I dug deeper to learn more about the marquee tag and this is then where I found that the tag had been depreicated and was no longer supported by more modern browsers. So finding this out I looked more into CSS animations and found I could replicate the effect I wanted. The following in the code I implemented and you will see in the project code.
 
-``` 
+```
 
     @keyframes marquee {
         from { transform: translateX(0%); }
@@ -231,11 +220,19 @@ This is where I dug deeper to learn more about the marquee tag and this is then 
 
 ### Second Problem - User Login
 
-My second problem that I came across was creating the functionality for a user to be able to register, login and logout. 
-This was something new that I had never tried before but I knew it was going to be a important part of my project. 
+My second problem that I came across was creating the functionality for a user to be able to register, login and logout.
+This was something new that I had never tried before but I knew it was going to be a important part of my project.
 
 I did a lot of research online for this trying to figure out the best solution for a user system that would work well with the current tech stack. I did start by looking at [OAuth](https://auth0.com/) as this was a resource that I knew about and thought that it might work. While I was looking into how to intergrate OAuth into my current project I came across a Flask addon called [Flask Login](https://pypi.org/project/Flask-Login/) which gave me the functionallity that I was looking for without trying to learn a whole new system.
 
 I figured this would be the best option for me to intergrate into the project as I am already using Flask.
 
-I spent some time going through the Flask Login documentation and some online tutorials on youtube, to try and understand how Flask Login works. 
+I spent some time going through the Flask Login documentation and some online tutorials on youtube, to try and understand how Flask Login works.
+
+### Third Problem - User Collection
+
+My third problem came when I was building the user profile with the user collection. My initial thought for this was to make a check back for each available card with all cards being sorted into their own set groups. After attempting this the loading time for the profile page was way to long as it was checking every card against the criteria and would then eventually time out the connection meaning I needed to figure out a different way to go about setting up this profile.
+
+My next idea was to add a card counter to each set title, displaying how many cards from that set that a user has marked that they have. Then to be able to add a card to their collection they would need to search for that specific card via either the card or the set search then on the card page click the add to collection button. Then if they want to remove a card from their collection they would need to untick the card of the profile page and press the save button to update their collection.
+
+I feel like doing it this way gave users more control of making sure that they have selected the correct card, by checking all the inforamtion about the card while they are on the card page.

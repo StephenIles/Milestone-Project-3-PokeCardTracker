@@ -17,7 +17,9 @@
             {% for set in sets %} {% if set.series == setName %}
             <li>
               <div class="collapsible-header">{{ set.name }}</div>
-              <div class="collapsible-body"></div>
+              {% for card in user_cards_dict %}
+              <div class="collapsible-body">{{ card }}</div>
+              {% endfor %}
             </li>
             {% endif %} {% endfor %}
           </ul>

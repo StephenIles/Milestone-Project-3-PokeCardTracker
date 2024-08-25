@@ -20,6 +20,7 @@ class UserCards(db.Model):
     user_cards_id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     card_id = db.Column(db.String(50), nullable=True)
+    card_image = db.Column(db.String(100), nullable=True)
     set_id = db.Column(db.String(50), nullable=True)
 
     
