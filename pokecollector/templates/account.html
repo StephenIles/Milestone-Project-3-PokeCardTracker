@@ -18,7 +18,10 @@
             <li>
               <div class="collapsible-header">{{ set.name }}</div>
               {% for card in user_cards_dict %}
-              <div class="collapsible-body">{{ card }}</div>
+              <div class="collapsible-body">
+                <p>{{ card.card_name }}</p>
+                <p>{{ card.card_number }}</p>
+              </div>
               {% endfor %}
             </li>
             {% endif %} {% endfor %}
