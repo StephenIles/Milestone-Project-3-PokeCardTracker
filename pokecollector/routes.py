@@ -295,7 +295,6 @@ def add_collection(card_id):
     card = Card.where(q=f'id:"{card_id}"')
     
     if not card:
-        flash('Card not found')
         return redirect(url_for('home'))  # Redirect to home or another route if card is not found
 
     card = card[0]  # Assuming `where` returns a list, get the first item
@@ -306,7 +305,7 @@ def add_collection(card_id):
 
     # Check if the user already has the card in the collection
     if card_id in user_cards_dict:
-        flash('Card already in your collection')
+        logging.debug("Card already in user collection")
     else:
         # Build new card entry
         user_card_image = card.images.small  # Corrected image field access
@@ -326,9 +325,6 @@ def add_collection(card_id):
         # Commit new card to the database
         db.session.add(new_card)
         db.session.commit()
-
-        # Let the user know the card has been added to their collection
-        flash('Card added to your collection')
 
     # debug logging
     logging.debug(f"Card ID: {card_id}")
@@ -353,11 +349,9 @@ def delete_user():
     if user:
         db.session.delete(user)
         db.session.commit()
-        flash('User has been deleted successfully')
         logging.debug(f'User {user_id} deleted from database')
     # if not let the user know nothing was deleted
     else:
-        flash('User not found.')
         logging.debug(f'User {user_id} not found in database')
 
     return redirect(url_for('home'))

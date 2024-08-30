@@ -39,12 +39,18 @@
        - Collection Milestones: Set and achieve milestones for the number of cards, values, or specific themes.
 
 - ### Design
+
   - #### Colour Scheme
-    -
+
+    - The website features a minimalist colour scheme to ensure a clean and modern look. Predominantly, whites and greys are used to create a neutral background that allows the content to stand out. The default Materialize button colors are utilized for various buttons, providing a consistent and visually appealing interface. This simple yet effective colour scheme enhances readability and ensures that the focus remains on the content and functionality of the website.
+
   - #### Typography
-    -
+
+    - - The website uses a clean and modern typography style to enhance readability and user experience. The primary font used is 'Roboto', which is known for its clarity and versatility. For headings and titles, 'Montserrat' is used to provide a distinct and elegant look. Both fonts are sourced from Google Fonts, ensuring they are web-safe and widely supported across different browsers and devices.
+
   - #### Imagery
-    -
+
+    -The website utilizes high-quality imagery to enhance the visual appeal and user engagement. Images of the cards are prominently displayed to showcase their details and designs, providing users with a clear and attractive view of their collections. The use of consistent and relevant imagery helps to create a cohesive and immersive experience, making the website not only functional but also visually appealing. All images are optimized for fast loading times without compromising quality, ensuring a smooth and enjoyable user experience.
 
 * ### Wireframes
 
@@ -92,16 +98,52 @@
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
-
-- [W3C Markup Validator](https://validator.w3.org/#validate_by_input)
-
-### Results
-
 ### Testing User Stories from User Experience (UX) Section
 
 - #### First Time Visitor Goals
+
+  1. **Creating an Account**
+
+     - **Sign up**: Click on the "Sign Up" button at the top right corner of the page.
+       - **Test**: Click the "Sign Up" button and verify that the sign-up form appears.
+       - **Result**: The sign-up form appeared as expected.
+       - **Status**: Pass
+     - **Fill in Details**: Provide your username, email, and password.
+       - **Test**: Fill in the sign-up form with a username, email, and password, then submit the form.
+       - **Result**: The form was submitted successfully, and a verification email was sent.
+       - **Status**: Pass
+
+  2. **Explore the Card Database**
+
+     - **Search for Cards**: Use the search bar to find specific cards by name.
+       - **Test**: Enter a card name in the search bar and verify that the search results are displayed.
+       - **Result**: The search results displayed the relevant cards.
+       - **Status**: Pass
+     - **View Card Details**: Click on any card to see detailed information, including stats, rarity, and pricing.
+       - **Test**: Click on a card from the search results to view its details.
+       - **Result**: The card details page displayed the correct information.
+       - **Status**: Pass
+
+  3. **Build Your Collection**
+     - **Add Cards**: Find the cards you own and add them to your personal collection.
+       - **Test**: Locate a card and add it to the personal collection.
+       - **Result**: The card was successfully added to the personal collection.
+       - **Status**: Pass
+
 - #### Frequent User Goals
+
+  1. **Expand and Update Your Collection**
+
+     - **New Additions**: Regularly add new cards to your collection as you acquire them.
+       - **Test**: Add a new card to the collection and verify that it appears correctly.
+       - **Result**: The new card was added and displayed correctly in the collection.
+       - **Status**: Pass
+
+  2. **Set Long Term Goals**
+     - **Complete Sets**: Aim to complete entire sets or special collections.
+       - **Test**: Track progress towards completing a set and verify that the progress is accurately displayed.
+       - **Result**: The progress towards completing the set was accurately tracked and displayed.
+       - **Status**: Pass
 
 ### Further Testing
 
@@ -114,55 +156,205 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 ## Lighthouse Scores
 
+The website was tested using Google Chrome's Lighthouse tool. Below are the scores:
+
+### HomePage
+
+- **Performance**: 72
+- **Accessibility**: 77
+- **Best Practices**: 71
+- **SEO**: 91
+
+### All Sets Page
+
+- **Performance**: 93
+- **Accessibility**: 77
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Set Pages
+
+- **Performance**: 84
+- **Accessibility**: 77
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Card Search (No Search)
+
+- **Performance**: 100
+- **Accessibility**: 80
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Card Search (With a search)#
+
+- **Performance**: 70
+- **Accessibility**: 80
+- **Best Practises**: 75
+- **SEO**: 91
+
+### Profile
+
+- **Performance**: 98
+- **Accessibility**: 80
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Card Page
+
+- **Performance**: 93
+- **Accessibility**: 89
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Login Page
+
+- **Performance**: 100
+- **Accessibility**: 80
+- **Best Practises**: 79
+- **SEO**: 91
+
+### Signup Page
+
+- **Performance**: 100
+- **Accessibility**: 80
+- **Best Practises**: 79
+- **SEO**: 91
+
+There are performance issues due to the loading of images from the Pokemon API, a way around this may be been to clone to database to a local databse but in doing that I would not have the up to date inforamtion or would have to do a weekly update to make sure the data was correct.
+
 ### Known Bugs
+
+Currently no known bugs that I havent been able to fix.
 
 ## Deployment
 
 ### Heroku
 
-This Project was deployed with Heroku
+This project was deployed with Heroku. Follow these steps to deploy your project:
 
-1. Create an account with Heroku
-2. Link your Github and your Heroku accounts
-3. In Heroku create a new app from Github selection the porjext repository
+1. **Create an Account with Heroku**:
+
+   - Go to [Heroku](https://www.heroku.com/) and sign up for a free account.
+
+2. **Install the Heroku CLI**:
+
+   - Download and install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) for your operating system.
+
+3. **Log in to Heroku via CLI**:
+
+   ```bash
+   heroku login
+   ```
+
+4. **Create a New Heroku App**:
+
+   - Navigate to your project directory in the terminal.
+
+   ```bash
+   cd your-project-directory
+   ```
+
+   - Create a new Heroku app.
+
+   ```bash
+   heroku create your-app-name
+   ```
+
+5. **Link Your GitHub Repository**:
+
+   - Go to the Heroku dashboard, select your app, and navigate to the "Deploy" tab.
+   - Under "Deployment method", select "GitHub".
+   - Connect to your GitHub account and search for your repository.
+   - Click "Connect" to link your GitHub repository to the Heroku app.
+
+6. **Set Up Environment Variables**:
+
+   - In the Heroku dashboard, go to the "Settings" tab.
+   - Click "Reveal Config Vars" and add the necessary environment variables (e.g., `DATABASE_URL`, `SECRET_KEY`, etc.).
+
+7. **Deploy the App**:
+
+   - In the "Deploy" tab, under "Manual deploy", select the branch you want to deploy (usually `main` or `master`).
+   - Click "Deploy Branch".
+
+8. **Migrate the Database**:
+   - Run the following commands to migrate the database:
+   ```bash
+   heroku run python manage.py migrate
+   ```
 
 ### Database Hosting
 
-1. Tembo
+1. **Tembo**:
+   - Sign up for a free account at [Tembo](https://www.tembo.io/).
+   - Create a new PostgreSQL database.
+   - Copy the database URL provided by Tembo and add it to your Heroku config vars as `DATABASE_URL`.
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+By forking the GitHub Repository, you make a copy of the original repository on your GitHub account to view and/or make changes without affecting the original repository. Follow these steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/StephenIles/OneLife-Milestone-Project-1-)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. **Log in to GitHub**:
+
+   - Locate the [GitHub Repository](https://github.com/StephenIles/Milestone-Project-3-PokeCardTracker).
+
+2. **Fork the Repository**:
+   - At the top of the repository (not the top of the page), just above the "Settings" button on the menu, locate the "Fork" button.
+   - Click "Fork" to create a copy of the repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/StephenIles/OneLife-Milestone-Project-1-)
-2. Under the repository name, click "Clone or download".
-3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
+1. **Log in to GitHub**:
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-```
+   - Locate the [GitHub Repository](https://github.com/StephenIles/Milestone-Project-3-PokeCardTracker).
 
-7. Press Enter. Your local clone will be created.
+2. **Clone the Repository**:
 
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-> Cloning into `CI-Clone`...
-> remote: Counting objects: 10, done.
-> remote: Compressing objects: 100% (8/8), done.
-> remove: Total 10 (delta 1), reused 10 (delta 1)
-> Unpacking objects: 100% (10/10), done.
-```
+   - Under the repository name, click "Code" and then "Clone or download".
+   - Copy the URL provided.
+   - Open your terminal and run the following command:
 
-Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+   ```bash
+   git clone https://github.com/StephenIles/Milestone-Project-3-PokeCardTracker
+   ```
+
+   - Navigate to the project directory:
+
+   ```bash
+   cd Milestone-Project-3-PokeCardTracker
+   ```
+
+3. **Install Dependencies**:
+
+   - Create a virtual environment and activate it:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+
+   - Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set Up Environment Variables**:
+
+   - Create a `.env` file in the project root and add the necessary environment variables (e.g., `DATABASE_URL`, `SECRET_KEY`, etc.).
+
+5. **Run the Application Locally**:
+   - Apply migrations:
+   ```bash
+   python manage.py migrate
+   ```
+   - Run the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+By following these detailed instructions, you should be able to deploy your project on Heroku, set up the database, fork the repository, and make a local clone for development.
 
 ## Credits
 
