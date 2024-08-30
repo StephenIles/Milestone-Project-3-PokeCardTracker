@@ -271,7 +271,23 @@ This project was deployed with Heroku. Follow these steps to deploy your project
 6. **Set Up Environment Variables**:
 
    - In the Heroku dashboard, go to the "Settings" tab.
-   - Click "Reveal Config Vars" and add the necessary environment variables (e.g., `DATABASE_URL`, `SECRET_KEY`, etc.).
+   - Click "Reveal Config Vars" and add the necessary environment variables. The variables you need to set up are:
+
+     | Variable Name        | Description                                                    |
+     | -------------------- | -------------------------------------------------------------- |
+     | `DATABASE_URL`       | The URL of your PostgreSQL database                            |
+     | `SECRET_KEY`         | A secret key for your application                              |
+     | `DEBUG`              | Set to `False` for production                                  |
+     | `POKEMONTCG_API_KEY` | Get this key from [PokemonTCG API](https://dev.pokemontcg.io/) |
+
+     Example:
+
+     ```bash
+     DATABASE_URL=your-database-url
+     SECRET_KEY=your-secret-key
+     DEBUG=False
+     POKEMONTCG_API_KEY=your-pokemontcg-key
+     ```
 
 7. **Deploy the App**:
 
