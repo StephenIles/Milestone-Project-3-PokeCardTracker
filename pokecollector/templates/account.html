@@ -3,6 +3,9 @@
 <div class="row">
   <div class="col s12">
     <h2>{{ name }}</h2>
+    <form method="POST" action="/delete_user" onsubmit="return confirmDelete()">
+      <button type="submit">Delete Account</button>
+    </form>
   </div>
 </div>
 
@@ -19,8 +22,14 @@
               <div class="collapsible-header">{{ set.name }}</div>
               {% for card in user_cards_dict %}
               <div class="collapsible-body">
-                <p>{{ card.card_name }}</p>
-                <p>{{ card.card_number }}</p>
+                <img
+                  class="collection_card_image"
+                  src="{{ card.card_image }}"
+                />
+                <p class="collection_card_title">{{ card.card_name}}</p>
+                <p class="collection_card_number">
+                  {{ card.card_number }} / {{ set.total }}
+                </p>
               </div>
               {% endfor %}
             </li>

@@ -8,7 +8,7 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(1000), unique=True)
     password = db.Column(db.String(1000), nullable=False)
     name = db.Column(db.String(1000))
-    cards = db.relationship('UserCards', backref='user', lazy=True)
+    cards = db.relationship('UserCards', backref='user', cascade='all, delete-orphan', lazy=True)
     
     def __repr__(self):
         return f'<User {self.email}>'

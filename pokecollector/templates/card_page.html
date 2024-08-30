@@ -18,6 +18,9 @@
       <form method="POST" action="/add_collection/{{ card[0].id }}">
         <button type="submit">Add To Collection</button>
       </form>
+      <form method="POST" action="/delete_card/{{ card[0].id }}">
+        <button type="submit">Remove From Collection</button>
+      </form>
     </div>
     {% endif %}
   </div>
@@ -38,7 +41,8 @@
           >
         </h5>
         <p>Last Updated: {{ card[0].tcgplayer.updatedAt }}</p>
-        {% if card[0].tcgplayer.prices.normal != None %}
+        {% if card[0].tcgplayer.prices != None %} {% if
+        card[0].tcgplayer.prices.normal != None %}
         <div class="col s12">
           <h5>Normal</h5>
         </div>
@@ -71,19 +75,19 @@
           <h6>{{ card[0].tcgplayer.prices.holofoil.low }}</h6>
         </div>
         <div class="col s4">
-          <h5>Mid</h5>
+          <h5>Low</h5>
           <h6>{{ card[0].tcgplayer.prices.holofoil.mid }}</h6>
         </div>
         <div class="col s4">
-          <h5>High</h5>
+          <h5>Low</h5>
           <h6>{{ card[0].tcgplayer.prices.holofoil.high }}</h6>
         </div>
         <div class="col s4">
-          <h5>Market</h5>
+          <h5>Low</h5>
           <h6>{{ card[0].tcgplayer.prices.holofoil.market }}</h6>
         </div>
         <div class="col s4">
-          <h5>Direct Low</h5>
+          <h5>Low</h5>
           <h6>{{ card[0].tcgplayer.prices.holofoil.directLow }}</h6>
         </div>
         {% endif %} {% if card[0].tcgplayer.prices.reverseHolofoil != None %}
@@ -159,7 +163,7 @@
           <h5>Direct Low</h5>
           <h6>{{ card[0].tcgplayer.prices.firstEditionNormal.directLow }}</h6>
         </div>
-        {% endif %}
+        {% endif %} {% endif %}
       </div>
       <div class="row bottom-border">
         <h5 class="bold-text">

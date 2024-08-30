@@ -335,8 +335,43 @@ def add_collection(card_id):
     logging.debug(f"User: {current_user}")
 
     # Redirect back to the card's detail page
-    return redirect(url_for('cards', card_id=card_id))  # Ensure this is always executed
+    return redirect(url_for('cards', card_id=card_id))
 
+@app.route("/delete_user", methods=['POST'])
+@login_required
+def delete_user():
+    # get the user record from the database
+    user_id = current_user.id
+    user = User.query.get(user_id)
 
-       
+    # if the user is in the database delete
+    if user:
+        db.session.delete(user)
+        db.session.commit()
+        flash('User has been deleted successfully')
+        logging.debug(f'User {user_id} deleted from database')
+    # if not let the user know nothing was deleted
+    else:
+        flash('User not found.')
+        logging.debug(f'User {user_id} not found in database')
+
+    return redirect(url_for('home'))
+
+@app.route("/delete_card/<card_id>", methods=["POST"])
+@login_required
+def delete_card(card_id):
+    
+    # Query the card to ensure it belongs to the current user
+    card = UserCards.query.filter_by(card_id=card_id, user_id=current_user.id).first()
+
+    if card:
+        db.session.delete(card)
+        db.session.commit()
+        logging.debug(f'Card {card_id} deleted from user {current_user.id} collection')
+    else:
+        logging.debug(f'Card {card_id} not found in user {current_user.id} collection')
+
+    # Redirect back to the card's detail page
+    return redirect(url_for('cards', card_id=card_id))  
+
 
