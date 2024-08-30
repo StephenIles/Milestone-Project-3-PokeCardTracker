@@ -2,7 +2,12 @@
 
 ## Live Website Link
 
-[Pokemon Vault]()
+[Pokemon Vault](https://pokemonvault-aa08546c246b.herokuapp.com/profile)
+
+## Test User Login
+
+**Email**: test123@test.com
+**Password**: test123
 
 ## User Experience (UX)
 
@@ -154,6 +159,8 @@
 
 ## Testing Table
 
+All aplication testing was done with logging statements throughout development. You can see these in the console when a page is loaded.
+
 ## Lighthouse Scores
 
 The website was tested using Google Chrome's Lighthouse tool. Below are the scores:
@@ -275,18 +282,24 @@ This project was deployed with Heroku. Follow these steps to deploy your project
 
      | Variable Name        | Description                                                    |
      | -------------------- | -------------------------------------------------------------- |
-     | `DATABASE_URL`       | The URL of your PostgreSQL database                            |
+     | `DB_URL`             | The URL of your PostgreSQL database                            |
      | `SECRET_KEY`         | A secret key for your application                              |
      | `DEBUG`              | Set to `False` for production                                  |
      | `POKEMONTCG_API_KEY` | Get this key from [PokemonTCG API](https://dev.pokemontcg.io/) |
+     | `IP`                 | The IP address to run the application                          |
+     | `PORT`               | The port number to run the application                         |
+     | `DEVELOPMENT`        | Set to `True` for development environments                     |
 
      Example:
 
      ```bash
-     DATABASE_URL=your-database-url
+     DB_URL=your-database-url
      SECRET_KEY=your-secret-key
      DEBUG=False
-     POKEMONTCG_API_KEY=your-pokemontcg-key
+     POKEMONTCG_API_KEY=your-pokemontcg-api-key
+     IP=0.0.0.0
+     PORT=5000
+     DEVELOPMENT=True
      ```
 
 7. **Deploy the App**:
