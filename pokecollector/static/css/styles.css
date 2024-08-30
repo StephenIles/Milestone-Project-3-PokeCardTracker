@@ -1,200 +1,357 @@
+html,
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", serif;
 }
 
 main {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 /* Universal Stylings */
 
 .bottom-border {
-    border-bottom: solid black 2px;
+  border-bottom: solid black 2px;
 }
 
 .bold-text {
-    font-weight: 500;
+  font-weight: 500;
 }
-
-
 
 /* NavBar */
 
 nav {
-    height: 100px;
+  height: 100px;
 }
 
 .nav-warpper {
-    margin: 20px;
+  margin: 20px;
 }
 
 nav ul a {
-    color: black;
-    line-height: 100px;
-    font-weight: 500;
+  color: black;
+  line-height: 100px;
+  font-weight: 500;
 }
 
 .logo {
-    height: 100px;
+  height: 100px;
+}
+
+.sidenav-trigger {
+  color: #000;
 }
 
 /* Hero Seciton */
 
 .hero-image {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    height: 700px;
-    background: url("../img/hero-background-img.jpg") no-repeat center;
-    background-size: cover;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 700px;
+  background: url("../img/hero-background-img.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .hero-card {
-    margin: 10px 30px;
-    height: 500px;
+  margin: 10px 30px;
+  height: 500px;
 }
 
 .marquee-container {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .marquee {
-    animation: marquee 250s linear infinite;
-    white-space: nowrap;
+  animation: marquee 250s linear infinite;
+  white-space: nowrap;
 }
 
 .marquee li {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Featured Section */
 
 .featured-sets a {
-    color: black;
+  color: black;
 }
 
 .featured-sets h3 {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .feature-logo {
-    max-width: 75%;
-    max-height: 150px;
-    margin: auto;
+  max-width: 75%;
+  max-height: 150px;
+  margin: auto;
 }
 
 .feature-card {
-    background-color: #e4e4e4;
-    height: 25rem;
-    display: block;
-    border-radius: 25px;
+  background-color: #e4e4e4;
+  height: 25rem;
+  display: block;
+  border-radius: 25px;
 }
 
 .card-content {
-    margin: auto;
-    height: 100%;
+  margin: auto;
+  height: 100%;
 }
 
 .card-element {
-    height: 50%;
-    width: 100%;
-
-}
-
-/* Set Search */
-
-.search-box {
-    margin-top: 30px;
-    font-size: 25px;
-}
-
-.search-input {
-    width: 75%;
+  height: 50%;
+  width: 100%;
 }
 
 /* Card Page */
 
 .card-header h4 {
-    margin-top: 0;
-    color: rgb(90, 90, 90);
-    margin-bottom: 25px;
+  margin-top: 0;
+  color: rgb(90, 90, 90);
+  margin-bottom: 25px;
 }
 
 .card-header h3 {
-    margin-top: 25px;
-    margin-bottom: 0;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 
 .section-title {
-    margin-left: 15px;
-    text-decoration: underline;
-    font-size: 2em;
+  margin-left: 15px;
+  text-decoration: underline;
+  font-size: 2em;
 }
 
 .energy-img {
-    height: 35px;
-    margin-left: 2px;
+  height: 35px;
+  margin-left: 2px;
 }
 
 .card-number {
-    font-size: 30px;
-    height: 100%;
-    margin: auto;
+  font-size: 30px;
+  height: 100%;
+  margin: auto;
 }
 
-
 .card-img {
-    width: 100%;
-    max-width: 60%;
-    display: inline-block;
+  width: 100%;
+  max-width: 60%;
+  display: inline-block;
 }
 
 .type-img {
-    height: 35px;
-    margin-bottom: -10px;
-    margin-left: 5px;
+  height: 35px;
+  margin-bottom: -10px;
+  margin-left: 5px;
 }
 
-.card-hp h5, .card-hp img {
-    display: inline-block;
+.card-hp h5,
+.card-hp img {
+  display: inline-block;
 }
 
-/* Signup */
+.button-form {
+  display: inline-block;
+  width: 48%;
+}
 
+.full-width {
+  width: 100%;
+}
+
+.card-header h3 {
+  font-size: 2rem; /* Adjust the font size for the card name */
+}
+
+.card-header h4 {
+  font-size: 1.5rem; /* Adjust the font size for the card supertype and subtypes */
+}
+
+.card-number p {
+  font-size: 1.2rem; /* Adjust the font size for the card number */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Add some space between the buttons */
+}
+
+/* Signup / Login */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Add some space between the buttons */
+}
+
+.button-form {
+  flex: 1 1 48%; /* Make the buttons take up 48% of the container width */
+}
+
+.button-form {
+  flex: 1 1 48%; /* Make the buttons take up 48% of the container width */
+}
 
 /* Footer */
 
 footer {
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 footer ul {
-    list-style: none;
+  list-style: none;
 }
 
 footer li {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 footer li a {
-    color: black;
+  color: black;
 }
 
 .socials {
-    font-size: 25px;
-    margin: 0;
+  font-size: 25px;
+  margin: 0;
 }
 
 .credits {
-    margin: 0;
+  margin: 0;
+}
+
+/* Card Search */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card {
+  margin: 10px; /* Add some margin around the cards */
+}
+
+/* Set search */
+
+.set-search-page h4 {
+  font-size: 1.5rem; /* Adjust the font size for the card titles */
+}
+
+.set-search-page h5 {
+  font-size: 1.2rem; /* Adjust the font size for the card subtitles */
+}
+
+.set-search-page .card-element p {
+  font-size: 0.9rem; /* Adjust the font size for any paragraph text within the cards */
+}
+
+/* Account Page */
+
+.card-inline-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Add some padding for spacing */
+}
+
+.collection_card_image {
+  height: auto;
+  margin-right: 10px; /* Add some space between the image and the text */
+}
+
+.card-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection_card_title {
+  margin: 0;
+  font-size: 1rem; /* Adjust the font size as needed */
+}
+
+.collection_card_number {
+  margin: 0;
+  font-size: 0.9rem; /* Adjust the font size as needed */
+  color: #666; /* Optional: Add a subtle color for the card number */
 }
 
 /* animations */
 
 @keyframes marquee {
-    from { transform: translateX(0%); }
-    to   { transform: translateX(-100%); }
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-element h4,
+  .card-element h5 {
+    font-size: 1.2rem;
+  }
+  .set-search-page h4 {
+    font-size: 1rem; /* Further adjust the font size for smaller screens */
+  }
+
+  .set-search-page h5 {
+    font-size: 0.8rem; /* Further adjust the font size for smaller screens */
+  }
+
+  .set-search-page .card-element p {
+    font-size: 0.8rem; /* Further adjust the font size for smaller screens */
+  }
+
+  .button-form {
+    flex: 1 1 100%; /* Make the buttons stack vertically on smaller screens */
+  }
+
+  .card-header h3 {
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+  }
+
+  .card-header h4 {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+  }
+
+  .card-number p {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+  }
+
+  .button-form {
+    flex: 1 1 100%; /* Make the buttons stack vertically on smaller screens */
+  }
 }

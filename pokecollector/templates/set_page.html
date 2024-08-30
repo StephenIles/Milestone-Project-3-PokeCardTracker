@@ -1,21 +1,22 @@
-{% extends 'base.html' %}
-{% block content %}
-
-        <div class="container">
-            <div class="row">
-                <div class="col s12">
-                    <h3>{{ sets[0].name }}</h3>
-                </div>
-            </div>
-            <div class="row">
-                {% for card in cards %}
-                <a href="/cards/{{ card.id }}">
-                <div class="col s12 m6 l3">
-                    <img src="{{ card.images.small }}">
-                </div>
-                </a>
-                {% endfor %}
-            </div>
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col s12">
+      <h3>{{ sets[0].name }}</h3>
+    </div>
+  </div>
+  <div class="row card-container">
+    {% for card in cards %}
+    <div class="col s12 m6 l3">
+      <a href="/cards/{{ card.id }}">
+        <div class="card">
+          <div class="card-image">
+            <img src="{{ card.images.small }}" alt="{{ card.name }}" />
+          </div>
         </div>
-
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

@@ -214,16 +214,21 @@ def profile():
         if set.series not in series:
             series.append(set.series)
     user_cards = UserCards.query.filter_by(user_id=current_user.id).all()
-    user_cards_dict = {uc for uc in user_cards}
+
+    # Sort user cards by card number
+    user_cards_sorted = sorted(user_cards, key=lambda uc: uc.card_number)
+
+    user_cards_dict = {uc for uc in user_cards_sorted}
 
     # debug logging
     logging.debug(f"Sets: {sets}")
     logging.debug(f"Series: {series}")
     logging.debug(f"User cards: {user_cards}")
+    logging.debug(f"User cards sorted: {user_cards_sorted}")
     logging.debug(f"User cards dict: {user_cards_dict}")
     logging.debug(f"Current user: {current_user}")
 
-    return render_template("account.html", name=current_user.name, sets=sets, series=series, user_cards_dict=user_cards_dict)
+    return render_template("account.html", name=current_user.name, sets=sets, series=series, user_cards_dict=user_cards_sorted)
 
 @app.route('/logout')
 @login_required

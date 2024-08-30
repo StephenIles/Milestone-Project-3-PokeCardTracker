@@ -14,12 +14,27 @@
       <p>Card {{ card[0].number }}/{{ card[0].set.total }}</p>
     </div>
     {% if current_user.is_authenticated %}
-    <div class="col s6">
-      <form method="POST" action="/add_collection/{{ card[0].id }}">
-        <button type="submit">Add To Collection</button>
+    <div class="col s12 m6 l6 button-container">
+      <form
+        class="button-form"
+        method="POST"
+        action="/add_collection/{{ card[0].id }}"
+      >
+        <button class="btn waves-effect waves-light full-width" type="submit">
+          Add To Collection
+        </button>
       </form>
-      <form method="POST" action="/delete_card/{{ card[0].id }}">
-        <button type="submit">Remove From Collection</button>
+      <form
+        class="button-form"
+        method="POST"
+        action="/delete_card/{{ card[0].id }}"
+      >
+        <button
+          class="btn red waves-effect waves-light full-width"
+          type="submit"
+        >
+          Remove From Collection
+        </button>
       </form>
     </div>
     {% endif %}
@@ -280,7 +295,7 @@
       <div class="row">
         <h5 class="section-title bold-text">Set</h5>
         <div class="col s12">
-          <p>{{ card[0].set.name }}</p>
+          <a href="/sets/{{ card[0].set.id }}"><p>{{ card[0].set.name }}</p></a>
         </div>
       </div>
     </div>
